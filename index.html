@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div id="registrationPage" class="container">
+        <h1>Customer Registration</h1>
+        <form id="registrationForm">
+            <div class="box">
+                <div>Customer Details</div>
+                <div class="innerBox">
+                    <div class="inputBox">
+                        <label for="consumerId">Consumer ID:</label>
+                        <input type="text" id="consumerId" name="consumerId" readonly required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="billNumber">Bill Number:</label>
+                        <input type="text" id="billNumber" name="billNumber" required>
+                    </div>
+                </div>
+                <div>Customer Details</div>
+                <div class="innerBox">
+                    <div class="inputBox">
+                        <label for="title">Title:</label>
+                        <select id="title" name="title">
+                            <option value="Mr">Mr</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Dr">Dr</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+
+                        <label for="customerName">Customer Name:</label>
+                        <input type="text" id="customerName" name="customerName" maxlength="50" required>
+                    </div>
+                </div>
+                <div>Customer Details</div>
+                <div class="innerBox">
+                    <div class="inputBox">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="countryCode">Country Code:</label>
+                        <select id="countryCode" name="countryCode">
+                            <option value="+1">+1 (USA)</option>
+                            <option value="+91">+91 (India)</option>
+                        </select>
+                    </div>
+                </div>
+                <div>Customer Details</div>
+                <div class="innerBox">
+                    <div class="inputBox">
+                        <label for="mobileNumber">Mobile Number:</label>
+                        <input type="text" id="mobileNumber" name="mobileNumber" maxlength="20" required>
+                    </div>
+                    <div id="pwd">
+                        <div class="inputBox">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" maxlength="30" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="confirmPassword">Confirm Password:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" maxlength="30" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonBox">
+                    <button type="button" onclick="register()">Register</button>
+                    <button type="reset">Reset</button>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+
+    <div id="acknowledgmentPage" class="container" style="display:none;">
+        <h1>Registration Acknowledgment</h1>
+        <p id="successMessage">Consumer Registration successful</p>
+        <p>Customer ID: <span id="displayConsumerId"></span></p>
+        <p>Customer Name: <span id="displayCustomerName"></span></p>
+        <p>Email: <span id="displayEmail"></span></p>
+        <button onclick="goToLogin()">Go to Login</button>
+    </div>
+
+
+    <div id="homePage" class="container" style="display:none;">
+        <h1>Welcome <span id="welcomeUserName"></span></h1>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
